@@ -32,12 +32,12 @@ check_url_isEmpty(){
 check_status(){
     local $url 
     http_status=$(curl -Is $url | head -1 | awk '{print $2}')
-    log_debug "Received HTTP Status code for an $url is $http_status
+    log_debug "Received HTTP Status code for an $url is $http_status"
 
     if [ "$http_status" = "200" ]; then
-        log_info "Response code for $url is $http_status
+        log_info "Response code for $url is $http_status"
     else 
-        log_info "Failed to get response code for $url and code optained $http_status
+        log_info "Failed to get response code for $url and code optained $http_status"
     fi 
 }
 
